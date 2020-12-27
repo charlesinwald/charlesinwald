@@ -6,6 +6,7 @@ html, body, .App {
     background-color: #bdd4e7;
     background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
     background-attachment: fixed;
+    --skew: 5deg;
 }
 .portfolio-container {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
@@ -45,3 +46,45 @@ html, body, .App {
     cursor: pointer;
     /*color: white*/
 }
+
+.portfolio-project {
+    /*position: relative;*/
+}
+.portfolio-project:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: inherit;
+    height: inherit;
+    background: rgba(0,0,0, .45);
+    transform: rotate(1.5deg) translateX(10px) translateY(15px) skewX(4deg) skewY(-4deg);
+}
+
+.resume-container {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background-color: white;
+    backdrop-filter: blur(5px);
+    transform: skewY(var(--skew));
+    width: 100%;
+    padding-inline: 4rem;
+}
+.resume-inner-container {
+        transform: translateY(calc(var(--skew) / 4));
+}
+.resume-activity {
+    min-width: 15rem;
+}
+
+/*    !*transform: skewY(-5deg) translate(0,2.5);*!*/
+/*    !*transform: skew(0,-5deg) translate(-40px,0px);*!*/
+
+/*    !*transform: translateY(calc(var(--skew) / 3em));*!*/
+/*    transform: translateY( var(--translation) );*/
+
+
+/*}*/
+/*.resume-activity:nth-child(1) { --translation: calc(var(--skew-padding) * 1.5)}*/
+/*.resume-activity:nth-child(2) { --translation: calc(var(--skew-padding) * 1)}*/
+/*.resume-activity:nth-child(3) { --translation: calc(var(--skew-padding) * 0.5)}*/
+/*.resume-activity:nth-child(4) { --translation: calc(var(--skew-padding) * 0)}*/
