@@ -4,10 +4,20 @@ import Button from "@material-ui/core/Button";
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
+    Name: {
+        flexGrow: 1,
+        margin: theme.spacing(1),
+        [theme.breakpoints.down("sm")]: {
+            margin: 'auto'
+        },
+    },
     MenuButton: {
         marginLeft: theme.spacing(2),
         color: 'white',
         fontSize: "x-large",
+        [theme.breakpoints.down("sm")]: {
+            display: 'none'
+        },
         fontFamily: [
             'Roboto',
             '"Helvetica Neue"',
@@ -23,26 +33,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const scrollToContact = () => {
-    // const y = portfolioRef.current.getBoundingClientRect().top + window.pageYOffset;
-    const y = window.innerHeight / 1.2;
-    window.scrollTo({top: y, behavior: 'smooth'});
-}
-
-const scrollToPortfolio = () => {
-    // const y = portfolioRef.current.getBoundingClientRect().top + window.pageYOffset;
-    const y = window.innerHeight / 2.2;
-    window.scrollTo({top: y, behavior: 'smooth'});
-}
 
 export default function TopBar(props) {
     const classes = useStyles();
-
+    const contactRef = props.contactRef;
+    const portfolioRef = props.portfolioRef;
+    const scrollToRef = ref => {
+        ref.current.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
     return <AppBar position="static" style={{background: "transparent", boxShadow: "none", flexGrow: 1}}>
         <Toolbar className={classes.ToolBar}>
-            <h1 style={{margin: "1rem", flexGrow: 1, fontSize: 'xxx-large'}}>Charles Inwald</h1>
-            <Button className={classes.MenuButton} onClick={() => scrollToPortfolio()}>Portfolio</Button>
-            <Button className={classes.MenuButton} onClick={() => scrollToContact()}>Contact</Button>
+            <h1 className={classes.Name}>Charles Inwald</h1>
+            <Button className={classes.MenuButton} onClick={() => scrollToRef(portfolioRef)}>Portfolio</Button>
+            <Button className={classes.MenuButton} onClick={() => scrollToRef(contactRef)}>Contact</Button>
         </Toolbar>
     </AppBar>;
 }
