@@ -292,6 +292,11 @@ function App() {
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'leanhash.png'}/>
                                 </a>
+                                <a href='https://github.com/charlesinwald/DOT-Application' target="_blank"
+                                   className='portfolio-project'>
+                                    <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
+                                                whileTap={{scale: 0.9}} src={'crowdsensing.png'}/>
+                                </a>
                             </div>
                         </Grid>
                     </section>
