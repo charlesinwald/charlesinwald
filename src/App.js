@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             marginLeft: '1rem',
             fontSize: '1.2rem',
+            textAlign: 'center',
+            width: '100%',
+            padding: '0 calc(50% - 160px)'
         },
     },
     LandingBodyText: {
@@ -55,7 +58,10 @@ const useStyles = makeStyles((theme) => ({
         margin: 'auto',
         [theme.breakpoints.down("sm")]: {
             fontSize: '1rem',
-            marginLeft: '1rem'
+            marginLeft: '1rem',
+            textAlign: 'center',
+            width: '100%',
+            padding: '0 calc(50% - 160px)'
         },
         // fontSize: "x-large",
         fontFamily: [
@@ -81,11 +87,18 @@ const useStyles = makeStyles((theme) => ({
         // backgroundColor: 'white',
         // paddingInline: '2rem',
     },
+    PortfolioActivity: {
+        [theme.breakpoints.down("sm")]: {
+            margin: 'auto',
+            width: '100%',
+            padding: '0 calc(50% - 160px)'
+}
+    },
     PortfolioImage: {
         [theme.breakpoints.down("sm")]: {
             maxWidth: theme.spacing(40),
+            margin: 'auto',
         }
-
     },
     ContactGrid: {
         // marginTop: '4rem',
@@ -261,39 +274,41 @@ function App() {
                         <Grid container fluid>
                             <div className='inner-container'>
                                 <a href='https://github.com/charlesinwald/csvtordf' target="_blank"
+                                   className={classes.PortfolioActivity}
                                 >
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src='csv2rdf.gif'/>
                                 </a>
                                 {/*Todo add whitepaper button that has the paper for this project*/}
                                 <a href='https://github.com/charlesinwald/AmazonFakeReviewSpotter/tree/master'
-                                   target="_blank">
+                                   target="_blank"
+                                   className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'fakereviewspotter.gif'}/>
                                 </a>
 
                                 <a href='https://github.com/charlesinwald/DevWorthy' target="_blank"
-                                   className='portfolio-project'>
+                                   className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'devworthy.gif'}/>
                                 </a>
                                 <a href='https://github.com/charlesinwald/SegAN' target="_blank"
-                                   className='portfolio-project'>
+                                   className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'covid.png'}/>
                                 </a>
                                 <a href='https://github.com/charlesinwald/clockchain' target="_blank"
-                                   className='portfolio-project'>
+                                   className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'ClockChain2.png'}/>
                                 </a>
                                 <a href='https://github.com/charlesinwald/leanhash' target="_blank"
-                                   className='portfolio-project'>
+                                   className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'leanhash.png'}/>
                                 </a>
                                 <a href='https://github.com/charlesinwald/DOT-Application' target="_blank"
-                                   className='portfolio-project'>
+                                   className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'crowdsensing.png'}/>
                                 </a>

@@ -88,6 +88,9 @@ html, body, .App {
 
 
 @media only screen and (max-width: 600px) {
+    .heading {
+        text-align: center;
+    }
     .portfolio-container {
         padding-inline: 1rem;
         transform: skewY(0deg);
@@ -100,6 +103,8 @@ html, body, .App {
         transform: skewY(-5deg);
         padding: .2rem;
         margin-bottom: 1rem;
+    }
+    .inner-container {
     }
     .resume-inner-container {
         /*transform: translateY(calc(var(--skew) / 6));*/
