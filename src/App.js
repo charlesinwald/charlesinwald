@@ -18,7 +18,7 @@ import {SiJavascript, SiPython, SiReact} from "react-icons/si";
 import {DiJava} from "react-icons/di";
 import Typography from "@material-ui/core/Typography";
 import {responsiveFontSizes} from "@material-ui/core";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { createMuiTheme } from '@material-ui/core/styles';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -286,7 +286,12 @@ function App() {
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'fakereviewspotter.gif'}/>
                                 </a>
-
+                                <a href='https://memescene.net'
+                                   target="_blank"
+                                   className={classes.PortfolioActivity}>
+                                    <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
+                                                whileTap={{scale: 0.9}} src={'memescene.png'}/>
+                                </a>
                                 <a href='https://github.com/charlesinwald/DevWorthy' target="_blank"
                                    className={classes.PortfolioActivity}>
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
