@@ -286,6 +286,12 @@ function App() {
                                     <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
                                                 whileTap={{scale: 0.9}} src={'fakereviewspotter.gif'}/>
                                 </a>
+                                <a href='https://elastic-leakey-895379.netlify.app/'
+                                   target="_blank"
+                                   className={classes.PortfolioActivity}>
+                                    <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
+                                                whileTap={{scale: 0.9}} src={'fractals.png'}/>
+                                                </a>
                                 <a href='https://memescene.net'
                                    target="_blank"
                                    className={classes.PortfolioActivity}>
