@@ -336,11 +336,15 @@ function App() {
                         }}>Resume
                         </motion.h1>
                         <Grid container fluid className='resume-inner-container'>
+                        <WorkExperienceCard classes={classes} title='Nucleus Healthcare'
+                                                position='Frontend Developer'
+                                                description={['']}
+                                                image="nucleus.png"/>
                             <WorkExperienceCard classes={classes} title='Svadhi'
                                                 position='Full-Stack Development Intern'
                                                 description={SvadhiDescription}
                                                 image="svadhi.png"/>
-                           <WorkExperienceCard classes={classes} title='Pennsylvania Department of Transportation' position='Research Fellowship' description={CiamtisDescription} image="ciamtis.png"/>
+                            <WorkExperienceCard classes={classes} title='Pennsylvania Department of Transportation' position='Research Fellowship' description={CiamtisDescription} image="ciamtis.png"/>
                             <WorkExperienceCard classes={classes} title='Lehigh University' position='Software Engineering Teaching Assistant' image="lehigh.png" description={TaDescription}/>
                             <WorkExperienceCard classes={classes} title='EY, Prague, Czech Republic' position='Cybersecurity Intern' image="ey.png" description={EyDescription}/>
                             <WorkExperienceCard classes={classes} title='Olympus Corporation' position='Capstone Project' image="olympus.png" description={OlympusDescription}/>
