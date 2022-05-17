@@ -214,6 +214,7 @@ function App() {
         ref.current.scrollIntoView({ block: "end", behavior: "smooth" });
     }
 
+    let NucleusDescription = ['Developed sequential test scheduling and compliance management program for companies, schools, events, and long-term care facilities, built with React and React Native', 'Lead developer for Shoutout: Online Therapy & Addiction Treatment, built with React Native'];
     let SvadhiDescription = ['Engineered data visualization dashboard for college admissions profiling using Express, React and D3.', 'Worked collaboratively, leading front-end team.'];
     let CiamtisDescription = ['Developed crowdsensing mobile app for pavement monitoring using mobile\n' +
     'camera and accelerometer in Java', 'Prototyped Python cryptocurrency for distributed computer vision\n' +
@@ -344,7 +345,7 @@ function App() {
                         <Grid container fluid className='resume-inner-container'>
                         <WorkExperienceCard classes={classes} title='Nucleus Healthcare'
                                                 position='Frontend Developer'
-                                                description={['']}
+                                                description={NucleusDescription}
                                                 image="nucleus.png"/>
                             <WorkExperienceCard classes={classes} title='Svadhi'
                                                 position='Full-Stack Development Intern'
