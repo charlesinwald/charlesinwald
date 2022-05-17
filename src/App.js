@@ -273,6 +273,12 @@ function App() {
 
                         <Grid container fluid>
                             <div className='inner-container'>
+                            <a href='https://auratracker.org' target="_blank"
+                                   className={classes.PortfolioActivity}
+                                >
+                                    <motion.img className={classes.PortfolioImage} whileHover={{scale: 1.1}}
+                                                whileTap={{scale: 0.9}} src='aura.png'/>
+                                </a>
                                 <a href='https://github.com/charlesinwald/csvtordf' target="_blank"
                                    className={classes.PortfolioActivity}
                                 >
