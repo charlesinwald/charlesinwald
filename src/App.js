@@ -19,6 +19,9 @@ import { DiJava } from "react-icons/di";
 import Typography from "@material-ui/core/Typography";
 import { responsiveFontSizes } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-YZQJXBM1XT');
+
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
