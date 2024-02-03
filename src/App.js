@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
@@ -19,9 +19,8 @@ import { DiJava } from "react-icons/di";
 import Typography from "@material-ui/core/Typography";
 import { responsiveFontSizes } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-YZQJXBM1XT');
-
+import ReactGA from "react-ga";
+ReactGA.initialize("G-YZQJXBM1XT");
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -218,6 +217,11 @@ function App() {
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ block: "end", behavior: "smooth" });
   };
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   let AppleDescription = [
     "Designed and developed internal security tools using React and FastAPI, utilizing AWS S3 and SQS.",
     " Worked closely with cross-functional teams to develop end to end solutions capable of processing high volumes of data.",
@@ -315,10 +319,11 @@ function App() {
 
           <Grid container fluid>
             <div className="inner-container">
-            <a
+              <a
                 href="https://www.getinkwellapp.com/"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -331,6 +336,7 @@ function App() {
                 href="https://auratracker.org"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -343,6 +349,7 @@ function App() {
                 href="https://github.com/charlesinwald/csvtordf"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -356,6 +363,7 @@ function App() {
                 href="https://github.com/charlesinwald/AmazonFakeReviewSpotter/tree/master"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -368,6 +376,7 @@ function App() {
                 href="https://elastic-leakey-895379.netlify.app/"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -380,6 +389,7 @@ function App() {
                 href="https://memescene.net"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -392,6 +402,7 @@ function App() {
                 href="https://github.com/charlesinwald/DevWorthy"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -404,6 +415,7 @@ function App() {
                 href="https://github.com/charlesinwald/SegAN"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -416,6 +428,7 @@ function App() {
                 href="https://github.com/charlesinwald/clockchain"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -428,6 +441,7 @@ function App() {
                 href="https://github.com/charlesinwald/leanhash"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -440,6 +454,7 @@ function App() {
                 href="https://github.com/charlesinwald/DOT-Application"
                 target="_blank"
                 className={classes.PortfolioActivity}
+                rel="noreferrer"
               >
                 <motion.img
                   className={classes.PortfolioImage}
@@ -465,12 +480,12 @@ function App() {
           </motion.h1>
           <Grid container fluid className="resume-inner-container">
             <WorkExperienceCard
-                classes={classes}
-                title="Apple"
-                position="Frontend Developer"
-                description={AppleDescription}
-                image="apple.png"
-                />
+              classes={classes}
+              title="Apple"
+              position="Frontend Developer"
+              description={AppleDescription}
+              image="apple.png"
+            />
             <WorkExperienceCard
               classes={classes}
               title="Nucleus Healthcare"
