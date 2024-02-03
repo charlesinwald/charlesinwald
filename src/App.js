@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1rem",
+      fontSize: "1.5rem",
       marginLeft: "1rem",
       textAlign: "center",
       width: "100%",
@@ -90,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
       margin: "auto",
       width: "100%",
       padding: "0 calc(50% - 160px)",
+      fontSize: "1.5rem",
     },
   },
   PortfolioImage: {
@@ -154,6 +155,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       minWidth: "5rem",
       maxWidth: "90%",
+      fontSize: "1.5rem",
       // margin: '2rem',
     },
     resumeActivityContent: {
