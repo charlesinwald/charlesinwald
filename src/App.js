@@ -388,7 +388,7 @@ function App() {
                 />
               </a>
               <a
-                href="https://memescene.net"
+                href="https://github.com/charlesinwald/rusty_read"
                 target="_blank"
                 className={classes.PortfolioActivity}
                 rel="noreferrer"
@@ -397,7 +397,7 @@ function App() {
                   className={classes.PortfolioImage}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  src={"memescene.png"}
+                  src={"rustyread.png"}
                 />
               </a>
               <a
