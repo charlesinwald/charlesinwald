@@ -321,6 +321,19 @@ function App() {
 
           <Grid container fluid>
             <div className="inner-container">
+            <a
+                href="https://github.com/charlesinwald/rustinx-react"
+                target="_blank"
+                className={classes.PortfolioActivity}
+                rel="noreferrer"
+              >
+                <motion.img
+                  className={classes.PortfolioImage}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  src="rustinx.png"
+                />
+              </a>
               <a
                 href="https://www.getinkwellapp.com/"
                 target="_blank"
