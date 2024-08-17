@@ -322,7 +322,7 @@ function App() {
           <Grid container fluid>
             <div className="inner-container">
             <a
-                href="https://github.com/charlesinwald/rustinx-react"
+                href="https://rustinx.vercel.app"
                 target="_blank"
                 className={classes.PortfolioActivity}
                 rel="noreferrer"
