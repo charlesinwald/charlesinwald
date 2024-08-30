@@ -348,6 +348,19 @@ function App() {
                 />
               </a>
               <a
+                href="https://data-science-landing.vercel.app/"
+                target="_blank"
+                className={classes.PortfolioActivity}
+                rel="noreferrer"
+              >
+                <motion.img
+                  className={classes.PortfolioImage}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  src="datascienceprojects.png"
+                />
+              </a>
+              <a
                 href="https://auratracker.org"
                 target="_blank"
                 className={classes.PortfolioActivity}
