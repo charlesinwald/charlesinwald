@@ -414,6 +414,19 @@ function App() {
                 />
               </a>
               <a
+                href="https://sneaker-customization.vercel.app/"
+                target="_blank"
+                className={classes.PortfolioActivity}
+                rel="noreferrer"
+              >
+                <motion.img
+                  className={classes.PortfolioImage}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  src={"sneakercustomizer.png"}
+                />
+              </a>
+              <a
                 href="https://github.com/charlesinwald/rusty_read"
                 target="_blank"
                 className={classes.PortfolioActivity}
